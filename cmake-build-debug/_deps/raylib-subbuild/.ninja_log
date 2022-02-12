@@ -1,0 +1,21 @@
+# ninja log v5
+0	109	1644701345161182861	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	8960e6d421b17363
+0	109	1644701345161182861	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	8960e6d421b17363
+109	3841	1644701348894106226	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	1553911b9c9ec83c
+109	3841	1644701348894106226	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	1553911b9c9ec83c
+3842	3868	1644701348920636847	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	5b0fffab413bddc0
+3842	3868	1644701348920636847	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	5b0fffab413bddc0
+3868	3894	1644701348947254894	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	865fa75245271e39
+3868	3894	1644701348947254894	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	865fa75245271e39
+3895	3920	1644701348972650794	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	953b9a8200437dcd
+3895	3920	1644701348972650794	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	953b9a8200437dcd
+3920	3946	1644701348998401556	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	d9e31da944eb12f7
+3920	3946	1644701348998401556	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	d9e31da944eb12f7
+3946	3970	1644701349022788492	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	b5556c80b099bdeb
+3946	3970	1644701349022788492	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	b5556c80b099bdeb
+3970	3996	1644701349049063299	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	f55036e01ee3073c
+3970	3996	1644701349049063299	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	f55036e01ee3073c
+3996	4033	1644701349085895776	CMakeFiles/raylib-populate-complete	894867e427dfc138
+3996	4033	1644701349085895776	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	894867e427dfc138
+3996	4033	1644701349085895776	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete	894867e427dfc138
+3996	4033	1644701349085895776	/Users/philipprademacher/Documents/raylib-master/projects/CMake/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	894867e427dfc138
