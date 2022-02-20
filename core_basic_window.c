@@ -14,6 +14,7 @@
 ********************************************************************************************/
 
 #include "raylib.h"
+#include "raymath.h"
 
 #if defined(PLATFORM_WEB)
     #include <emscripten/emscripten.h>
@@ -25,19 +26,29 @@
 int screenWidth = 800;
 int screenHeight = 450;
 
+Camera2D camera;
+Rectangle player = { 380, 205, 40, 40 };
+Rectangle Envi_1 = { -400, 250, 1800, 200 };
 //----------------------------------------------------------------------------------
 // Module Functions Declaration
 //----------------------------------------------------------------------------------
-void UpdateDrawFrame(void);     // Update and Draw one frame
+void UpdateDrawFrame(void);     // Update and Draw one frame 
 
 //----------------------------------------------------------------------------------
-// Main Enry Point
+// Init 2D Environment Variables
+//----------------------------------------------------------------------------------
+void init(void);
+
+
+//----------------------------------------------------------------------------------
+// Main Entry Point
 //----------------------------------------------------------------------------------
 int main()
 {
     // Initialization
     //--------------------------------------------------------------------------------------
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    init();
 
 #if defined(PLATFORM_WEB)
     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
@@ -48,6 +59,22 @@ int main()
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
+
+        if (IsKeyDown(KEY_D))
+            player.x++;
+
+        else if(IsKeyDown(KEY_A))
+            player.x--;
+
+        if (IsKeyDown(KEY_W))
+            player.y++;
+
+        else if (IsKeyDown(KEY_S))
+            player.y--;
+
+        // Camera zoom controls
+        camera.zoom += ((float)GetMouseWheelMove() * 0.05f);
+
         UpdateDrawFrame();
     }
 #endif
@@ -65,19 +92,35 @@ int main()
 //----------------------------------------------------------------------------------
 void UpdateDrawFrame(void)
 {
-    // Update
+    // Update CPU - Prep stuff
     //----------------------------------------------------------------------------------
     // TODO: Update your variables here
     //----------------------------------------------------------------------------------
 
-    // Draw
+    // CPU - Draw calls
     //----------------------------------------------------------------------------------
-    BeginDrawing();
 
-        ClearBackground(RAYWHITE);
+	// all inside window 2D stuff
+	BeginDrawing();
+        ClearBackground(LIGHTGRAY);
 
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+    // all inside window 2D stuff
+	     BeginMode2D(camera);
+
+       
+         DrawRectangleRec(Envi_1, BLACK);
+	     DrawRectangleRec(player, RED);
+
+         EndMode2D();
 
     EndDrawing();
     //----------------------------------------------------------------------------------
+}
+
+void init(void)
+{
+    camera.target = (Vector2){  400.0f, 225.0f };
+    camera.offset = (Vector2){ screenWidth/2.0f, screenHeight/2.0f };
+    camera.rotation = 0.0f;
+    camera.zoom = 1.0f;
 }
